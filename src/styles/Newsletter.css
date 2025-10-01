@@ -144,6 +144,7 @@
   justify-content: center;
   gap: 87px;
   height: 30px;
+  text-align: center;
 }
 
 .issue-label, .date-label {
@@ -166,6 +167,7 @@
   height: 30px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .logo-text {
@@ -753,3 +755,4 @@
     font-size: 14px;
   }
 }
+
