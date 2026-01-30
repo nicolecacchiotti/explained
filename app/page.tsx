@@ -189,8 +189,9 @@ export default function Home() {
         <section className="py-6">
           <div className="mx-auto max-w-3xl">
             <div className="rounded-lg border border-white/10 bg-zinc-900/50 px-6 py-4 backdrop-blur-sm">
+              <p className="mb-2 text-xs font-medium uppercase tracking-wide text-zinc-400">file access</p>
               <p className="text-sm text-zinc-300">
-                <span className="font-medium text-white">Note:</span> Each newsletter opens as a Figma prototype. If you don't have access, reach out to{" "}
+                Each newsletter opens as a Figma prototype. If you don't have access, reach out to{" "}
                 <span className="inline-flex items-center gap-1 text-white">
                   Bhavana Veeravalli
                   <button
