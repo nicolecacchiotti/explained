@@ -170,12 +170,14 @@ export interface CardTitleProps {
   children: ReactNode;
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   size?: "small" | "medium" | "large";
+  className?: string;
 }
 
 export function CardTitle({
   children,
   as: Component = "h3",
   size = "medium",
+  className = "",
 }: CardTitleProps) {
   const sizeClasses = {
     small: "text-lg",
@@ -184,7 +186,7 @@ export function CardTitle({
   };
 
   return (
-    <Component className={`mb-2 font-semibold text-white ${sizeClasses[size]}`}>
+    <Component className={`mb-2 font-semibold text-white ${sizeClasses[size]} ${className}`}>
       {children}
     </Component>
   );
