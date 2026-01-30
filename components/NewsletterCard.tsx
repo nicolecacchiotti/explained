@@ -25,8 +25,6 @@ export function NewsletterCard({ issue, isCurrent = false }: NewsletterCardProps
   return (
     <Card
       href={isComingSoon ? undefined : issue.figmaLink}
-      target={isComingSoon ? undefined : "_blank"}
-      rel={isComingSoon ? undefined : "noopener noreferrer"}
       variant={isComingSoon ? "comingSoon" : "interactive"}
     >
       <CardImage

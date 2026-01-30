@@ -34,19 +34,34 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["hero", "current-issue", "past-issues", "about", "resources"];
-      const scrollPosition = window.scrollY + 150; // Offset for fixed nav
+      const scrollPosition = window.scrollY + 200; // Offset for fixed nav
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Check if we're near the bottom of the page (for Resources section)
+      const isNearBottom = scrollPosition + windowHeight >= documentHeight - 100;
 
       // Check sections in reverse order to catch the bottom sections properly
       let activeId = "hero"; // Default to hero
       
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const sectionId = sections[i];
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop) {
-            activeId = sectionId;
-            break;
+      // If near bottom, prioritize resources section
+      if (isNearBottom) {
+        const resourcesElement = document.getElementById("resources");
+        if (resourcesElement) {
+          activeId = "resources";
+        }
+      } else {
+        // Otherwise, check sections normally
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const sectionId = sections[i];
+          const element = document.getElementById(sectionId);
+          if (element) {
+            const { offsetTop, offsetHeight } = element;
+            // Check if we're within the section or have passed it
+            if (scrollPosition >= offsetTop - 100) {
+              activeId = sectionId;
+              break;
+            }
           }
         }
       }
@@ -62,7 +77,16 @@ export default function Home() {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      const offset = 100; // Offset for fixed nav
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
   };
 
   // Show password protection if not authenticated
@@ -213,7 +237,7 @@ export default function Home() {
         </section>
 
         {/* Resources Section */}
-        <section id="resources" className="py-16">
+        <section id="resources" className="py-16 pb-32">
           <div className="mx-auto max-w-3xl">
             <h2 className="mb-6 text-3xl font-bold text-white">Resources & Links</h2>
             <p className="mb-8 text-lg text-zinc-400">
