@@ -9,7 +9,7 @@ export const newsletterIssues: NewsletterIssue[] = [
     featuredTool: "Cursor",
     description: "Want to integrate AI into your work but don't have the time to dig through articles? We created explained, a design newsletter dedicated to exploring AI. Our first issue spotlights Cursor.",
     imageUrl: "/images/Cursor.png",
-    figmaLink: "https://www.figma.com/proto/your-issue-1-link",
+    figmaLink: "https://www.figma.com/proto/RPGKxXCZfXDGqIqjConGpj/explained--WillowTree-s-Design-AI-Newsletter?page-id=1%3A5&node-id=38-72&viewport=339%2C160%2C0.52&t=zGSSNELuXUGsaVjQ-1&scaling=contain&content-scaling=responsive",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const newsletterIssues: NewsletterIssue[] = [
     featuredTool: "Fuel iX Copilots",
     description: "We're back again with another issue of explained, our design newsletter dedicated to exploring AI. Today, we're talking about the tool of all tools. You know it, you use it, you love it...it's Fuel iX Copilots.",
     imageUrl: "/images/FueliX.png",
-    figmaLink: "https://www.figma.com/proto/your-issue-2-link",
+    figmaLink: "https://www.figma.com/proto/RPGKxXCZfXDGqIqjConGpj/explained--WillowTree-s-Design-AI-Newsletter?page-id=614%3A2&node-id=614-300&viewport=299%2C75%2C0.58&t=x1vzP1EXIwszSOep-1&scaling=contain&content-scaling=responsive&starting-point-node-id=614%3A300",
   },
   {
     id: 3,

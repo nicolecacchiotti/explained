@@ -15,6 +15,10 @@ export function PasswordProtection({ onSuccess }: PasswordProtectionProps) {
     e.preventDefault();
     const correctPassword = process.env.NEXT_PUBLIC_SITE_PASSWORD || "";
     
+    // Debug logging (remove after fixing)
+    console.log("Env var exists:", !!process.env.NEXT_PUBLIC_SITE_PASSWORD);
+    console.log("Password length:", correctPassword.length);
+    
     // Trim whitespace from input
     const trimmedPassword = password.trim();
     
