@@ -185,6 +185,116 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="mx-auto max-w-7xl px-6">
+        {/* Figma Access Notification */}
+        <section className="py-6">
+          <div className="mx-auto max-w-3xl">
+            <div className="rounded-lg border border-white/10 bg-zinc-900/50 px-6 py-4 backdrop-blur-sm">
+              <p className="text-sm text-zinc-300">
+                <span className="font-medium text-white">Note:</span> Each newsletter opens as a Figma prototype. If you don't have access, reach out to{" "}
+                <span className="inline-flex items-center gap-1 text-white">
+                  Bhavana Veeravalli
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+                      setToastPosition({ top: rect.bottom + 8, left: rect.left });
+                      navigator.clipboard.writeText("Bhavana Veeravalli");
+                      setCopiedId("Bhavana Veeravalli");
+                      setTimeout(() => {
+                        setCopiedId(null);
+                        setToastPosition(null);
+                      }, 2000);
+                    }}
+                    className="text-white hover:text-zinc-200 transition-colors"
+                    title="Copy name"
+                  >
+                    <svg
+                      className="h-3.5 w-3.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </button>
+                </span>
+                ,{" "}
+                <span className="inline-flex items-center gap-1 text-white">
+                  Mickayla Ratliff
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+                      setToastPosition({ top: rect.bottom + 8, left: rect.left });
+                      navigator.clipboard.writeText("Mickayla Ratliff");
+                      setCopiedId("Mickayla Ratliff");
+                      setTimeout(() => {
+                        setCopiedId(null);
+                        setToastPosition(null);
+                      }, 2000);
+                    }}
+                    className="text-white hover:text-zinc-200 transition-colors"
+                    title="Copy name"
+                  >
+                    <svg
+                      className="h-3.5 w-3.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </button>
+                </span>
+                , or{" "}
+                <span className="inline-flex items-center gap-1 text-white">
+                  Nicole Cacchiotti
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+                      setToastPosition({ top: rect.bottom + 8, left: rect.left });
+                      navigator.clipboard.writeText("Nicole Cacchiotti");
+                      setCopiedId("Nicole Cacchiotti");
+                      setTimeout(() => {
+                        setCopiedId(null);
+                        setToastPosition(null);
+                      }, 2000);
+                    }}
+                    className="text-white hover:text-zinc-200 transition-colors"
+                    title="Copy name"
+                  >
+                    <svg
+                      className="h-3.5 w-3.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </button>
+                </span>{" "}
+                on Slack and we'll approve you.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Featured Current Issue */}
         <section id="current-issue" className="py-8">
           <div className="mx-auto max-w-3xl">
