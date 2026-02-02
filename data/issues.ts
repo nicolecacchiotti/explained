@@ -28,7 +28,7 @@ export const newsletterIssues: NewsletterIssue[] = [
     date: "January 2026",
     featuredTool: "AI Trends 2025-2026",
     description: "Stay tuned for our next issue exploring the biggest AI trends shaping design in 2025-2026.",
-    imageUrl: "/images/Placeholder.jpeg",
+    imageUrl: "/images/Trends cover 2.png",
     figmaLink: "#",
   },
 ];
