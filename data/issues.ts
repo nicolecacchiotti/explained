@@ -27,8 +27,8 @@ export const newsletterIssues: NewsletterIssue[] = [
     volume: "Vol 3",
     date: "January 2026",
     featuredTool: "AI Trends 2025-2026",
-    description: "Stay tuned for our next issue exploring the biggest AI trends shaping design in 2025-2026.",
-    imageUrl: "/images/Trends cover 2.png",
-    figmaLink: "#",
+    description: "Happy new year! January is a time for reflection and this month's newsletter is no different. We're starting 2026 by looking backwards and forward. We're looking at how we used AI in 2025 and reconsidering how we use it in 2026.",
+    imageUrl: "/images/Trends cover 3.png",
+    figmaLink: "https://www.figma.com/proto/RPGKxXCZfXDGqIqjConGpj/explained--WillowTree-s-Design-AI-Newsletter?page-id=947%3A104&node-id=948-415&viewport=268%2C155%2C0.53&t=tYmiAKV7e8LXOf2R-1&scaling=contain&content-scaling=responsive",
   },
 ];

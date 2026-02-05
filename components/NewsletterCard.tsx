@@ -20,7 +20,7 @@ interface NewsletterCardProps {
 
 export function NewsletterCard({ issue, isCurrent = false }: NewsletterCardProps) {
   const [imageError, setImageError] = useState(false);
-  const isComingSoon = isCurrent;
+  const isComingSoon = issue.figmaLink === "#" || !issue.figmaLink;
 
   return (
     <Card
