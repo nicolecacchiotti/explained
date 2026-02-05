@@ -1,0 +1,10 @@
+# Catch the old Cloudflare slug redirect that browsers cached
+/fuel-ix-copilots        /   301!
+/fuel-ix-copilots/*      /   301!
+
+# Force HTTP -> HTTPS (covers users cached to http)
+http://ai-explained.design/*       https://ai-explained.design/:splat     301!
+http://www.ai-explained.design/*   https://www.ai-explained.design/:splat     301!
+
+# Force www -> apex (normalize to non-www)
+https://www.ai-explained.design/*  https://ai-explained.design/:splat     301!
