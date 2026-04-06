@@ -329,9 +329,9 @@ export default function Home() {
               </div>
 
               {/* Past Issues Grid */}
-              <div className="grid gap-8 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-6">
                 {pastIssues.map((issue) => (
-                  <NewsletterCard key={issue.id} issue={issue} />
+                  <NewsletterCard key={issue.id} issue={issue} layout="horizontal" />
                 ))}
               </div>
             </div>

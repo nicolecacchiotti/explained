@@ -31,4 +31,14 @@ export const newsletterIssues: NewsletterIssue[] = [
     imageUrl: "/images/TrendsCover3.png",
     figmaLink: "https://www.figma.com/proto/RPGKxXCZfXDGqIqjConGpj/explained--WillowTree-s-Design-AI-Newsletter?page-id=947%3A104&node-id=948-415&viewport=268%2C155%2C0.53&t=tYmiAKV7e8LXOf2R-1&scaling=contain&content-scaling=responsive",
   },
+  {
+    id: 4,
+    title: "explained",
+    volume: "Vol 4",
+    date: "Apr 10",
+    featuredTool: "Coming Soon",
+    description: "The next issue of explained is on its way. Stay tuned!",
+    imageUrl: "/images/Placeholder.jpeg",
+    figmaLink: "#",
+  },
 ];
