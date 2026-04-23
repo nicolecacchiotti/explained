@@ -19,6 +19,21 @@ interface NewsletterCardProps {
   layout?: "vertical" | "horizontal";
 }
 
+function renderTitle(text: string) {
+  const parts = text.split(/(explained)/gi);
+  return (
+    <>
+      {parts.map((part, i) =>
+        part.toLowerCase() === "explained" ? (
+          <span key={i}>expl<em>ai</em>ned</span>
+        ) : (
+          part
+        )
+      )}
+    </>
+  );
+}
+
 export function NewsletterCard({ issue, isCurrent = false, layout = "vertical" }: NewsletterCardProps) {
   const [imageError, setImageError] = useState(false);
   const isComingSoon = issue.figmaLink === "#" || !issue.figmaLink;
@@ -36,7 +51,7 @@ export function NewsletterCard({ issue, isCurrent = false, layout = "vertical" }
         <div className="flex flex-1 flex-col justify-between p-6">
           <div>
             <CardMeta items={[issue.volume, issue.date]} />
-            <CardTitle size="large">{issue.featuredTool}</CardTitle>
+            <CardTitle size="large">{renderTitle(issue.featuredTool)}</CardTitle>
             <CardDescription clamp={3}>{issue.description}</CardDescription>
           </div>
           {!isComingSoon && (
@@ -72,6 +87,8 @@ export function NewsletterCard({ issue, isCurrent = false, layout = "vertical" }
   return (
     <Card
       href={isComingSoon ? undefined : issue.figmaLink}
+      target={isComingSoon ? undefined : "_blank"}
+      rel={isComingSoon ? undefined : "noopener noreferrer"}
       variant={isComingSoon ? "comingSoon" : "interactive"}
     >
       <CardImage
@@ -96,7 +113,7 @@ export function NewsletterCard({ issue, isCurrent = false, layout = "vertical" }
 
       <CardContent>
         <CardMeta items={[issue.volume, issue.date]} />
-        <CardTitle>{issue.featuredTool}</CardTitle>
+        <CardTitle>{renderTitle(issue.featuredTool)}</CardTitle>
         <CardDescription>{issue.description}</CardDescription>
         {!isComingSoon && <CardAction>Read Issue</CardAction>}
       </CardContent>

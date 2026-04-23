@@ -174,7 +174,7 @@ export default function Home() {
             <img src="/images/Logo.svg" alt="explained" className="h-[51px] md:h-16" />
           </div>
           <p className="mb-4 text-xl leading-relaxed text-zinc-300 md:text-2xl">
-            A design newsletter exploring AI tools
+            A design newsletter exploring AI
           </p>
           <p className="mx-auto text-lg leading-relaxed text-zinc-400">
             Want to integrate AI into your work but don't have the time to dig through articles? 
